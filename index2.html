@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ucapan Terima Kasih</title>
+    <style>
+        /* Styling Dasar */
+        @media (max-width: 600px) {
+    body {
+        padding: 10px;
+        font-size: 14px; /* Ukuran font lebih kecil untuk layar handphone */
+    
+        
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #fef8f8;
+            margin: 0;
+            overflow: hidden;
+        }
+    }
+        .container {
+            text-align: center;
+            width: 100%;
+            max-width: none;
+        }
+
+        .message {
+    font-size: 1.2em;
+    color: #555;
+    
+    overflow: hidden;
+    border-right: 3px solid #f06292;
+    width: 100%;
+    
+    margin: 10px auto;
+    animation: typing 10s steps(200, end) forwards, blink 0.7s step-end infinite alternate;
+}
+
+
+
+        /* Pemutar Musik */
+        .music-player {
+            margin-top: 20px;
+        }
+
+        /* Animasi Love */
+        .heart {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: #f06292;
+            transform: rotate(45deg);
+            animation: float 5s ease-in infinite;
+        }
+        
+        .heart:before,
+        .heart:after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: #f06292;
+            border-radius: 50%;
+        }
+
+        .heart:before {
+            top: -10px;
+            left: 0;
+        }
+
+        .heart:after {
+            left: 10px;
+            top: 0;
+        }
+
+        /* Animasi ketikan */
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        /* Animasi berkedip */
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+
+        /* Animasi Love melayang */
+        @keyframes float {
+            0% {
+                transform: rotate(45deg) translateY(0);
+                opacity: 1;
+            }
+            100% {
+                transform: rotate(45deg) translateY(-100vh);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="message">
+           
+---
+
+"Teruntuk dirimu yang pernah menjadi bagian terindah dalam hidupku,  
+
+Aku ingin mengucapkan terima kasih, bukan hanya untuk kebahagiaan dan tawa yang pernah kita bagi, tetapi juga untuk semua pelajaran tentang cinta, pengertian, dan penerimaan yang kamu ajarkan padaku. Waktu yang kita lalui bersama akan selalu menjadi kenangan yang indah, tempat aku belajar menjadi seseorang yang lebih baik.
+
+Aku memahami bahwa ada hal-hal di luar kendali kita, seperti perbedaan keyakinan dan keinginan keluarga yang membentuk jalan hidup kita. Meskipun berat, aku menerima bahwa ini adalah pilihan yang harus kita hargai bersama.
+
+Maaf jika selama ini ada kesalahan, kata-kata atau sikap yang tak berkenan di hatimu. Ketahuilah, kamu akan selalu menjadi bagian spesial yang tak akan tergantikan dalam hidupku.  
+
+Selamat menapaki hidup baru yang telah kamu pilih. Aku selalu berdoa semoga kamu bahagia, apa pun yang terjadi, dan semoga kita bisa saling mendoakan meski tak lagi berjalan beriringan."
+
+---
+
+
+        </div>
+        
+        <!-- Pemutar Musik -->
+        <div class="music-player">
+            <audio controls autoplay loop>
+                <source src="Powerslaves - Jika Kau Mengerti ( New Version Official Audio ).mp4" type="audio/mpeg">
+                Browser Anda tidak mendukung pemutar audio.
+            </audio>
+        </div>
+    </div>
+
+    <!-- JavaScript untuk membuat animasi hati berjatuhan -->
+    <script>
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 2 + 3 + 's';
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 5000);
+        }
+
+        setInterval(createHeart, 500);
+    </script>
+
+</body>
+</html>
